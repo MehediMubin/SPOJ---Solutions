@@ -27,7 +27,10 @@ int main ()
             else {
                 bool ok = true;
                 for (int j = 3; j * j <= i; j += 2) {
-                    if (i % j == 0) ok = false;
+                    if (i % j == 0) {
+                        ok = false;
+                        break;
+                    }
                 }
                 if (ok) v.pb(i);
             }
